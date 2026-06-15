@@ -18,7 +18,6 @@
       padding: 20px;
     }
 
-    /* ── Header ─────────────────────────────────── */
     header {
       text-align: center;
       padding: 24px 0 16px;
@@ -36,14 +35,13 @@
       color: #aaaaaa;
     }
 
-    /* ── Sync Instructions Box ───────────────────── */
     .sync-box {
       background-color: #111111;
       border: 1px solid #2a2a2a;
       border-radius: 6px;
       padding: 18px 24px;
       margin: 20px auto;
-      max-width: 720px;
+      max-width: 800px;
       text-align: center;
     }
 
@@ -58,13 +56,34 @@
     .sync-box .intro {
       font-size: 0.9rem;
       color: #cccccc;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .sync-options {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sync-option {
+      background-color: #1a1a1a;
+      border: 1px solid #333333;
+      border-radius: 4px;
+      padding: 14px 20px;
+    }
+
+    .sync-option .option-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #888888;
+      margin-bottom: 10px;
     }
 
     .sync-timestamps {
       display: flex;
       justify-content: center;
-      gap: 60px;
+      gap: 50px;
       flex-wrap: wrap;
     }
 
@@ -83,7 +102,7 @@
     }
 
     .sync-item .ts {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       font-family: 'Courier New', monospace;
       color: #ffffff;
@@ -95,12 +114,11 @@
     }
 
     .sync-note {
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 0.78rem;
       color: #555555;
     }
 
-    /* ── Video Container ─────────────────────────── */
     .video-container {
       display: flex;
       gap: 10px;
@@ -168,22 +186,47 @@
   <div class="sync-box">
     <h2>How to Sync the Videos</h2>
     <p class="intro">
-      Skip each video to the timestamp shown below, then press play on both.
+      Skip each video to the timestamps below, then press play on both.
     </p>
-    <div class="sync-timestamps">
-      <div class="sync-item">
-        <span class="source-label">Tiz Broadcast</span>
-        <span class="ts">13:28</span>
-        <span class="rider-label">Henry Kerr drop-in</span>
+    
+    <div class="sync-options">
+      
+      <div class="sync-option">
+        <div class="option-label">Option 1: Start from Race Beginning</div>
+        <div class="sync-timestamps">
+          <div class="sync-item">
+            <span class="source-label">Tiz Broadcast</span>
+            <span class="ts">0:00</span>
+            <span class="rider-label">Race start</span>
+          </div>
+          <div class="sync-item">
+            <span class="source-label">YouTube Commentary</span>
+            <span class="ts">1:51</span>
+            <span class="rider-label">Race start</span>
+          </div>
+        </div>
       </div>
-      <div class="sync-item">
-        <span class="source-label">YouTube Commentary</span>
-        <span class="ts">15:16</span>
-        <span class="rider-label">Henry Kerr drop-in</span>
+
+      <div class="sync-option">
+        <div class="option-label">Option 2: Skip to First Rider (Henry Kerr)</div>
+        <div class="sync-timestamps">
+          <div class="sync-item">
+            <span class="source-label">Tiz Broadcast</span>
+            <span class="ts">13:28</span>
+            <span class="rider-label">Henry Kerr drop-in</span>
+          </div>
+          <div class="sync-item">
+            <span class="source-label">YouTube Commentary</span>
+            <span class="ts">15:19</span>
+            <span class="rider-label">Henry Kerr drop-in</span>
+          </div>
+        </div>
       </div>
+
     </div>
+    
     <p class="sync-note">
-      YouTube commentary runs ~1 min 48 sec ahead of the Tiz broadcast throughout the entire video.
+      YouTube commentary runs ~1 min 51 sec ahead of the Tiz broadcast throughout the entire video.
     </p>
   </div>
 
